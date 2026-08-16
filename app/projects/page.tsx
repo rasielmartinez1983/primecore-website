@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 // Portfolio content, not a live dashboard -- re-fetch from ops.primecore/
-// field-photos at most once an hour (see lib/projectsData.ts's matching
+// field-photos at most once a minute (see lib/projectsData.ts's matching
 // fetch-level revalidate) instead of on every single page view.
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function ProjectsPage() {
   const projects = await fetchCompletedProjects();

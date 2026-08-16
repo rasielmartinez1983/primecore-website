@@ -49,10 +49,13 @@ export async function fetchCompletedProjects(): Promise<CompletedProject[]> {
   try {
     const res = await fetch(`${baseUrl.replace(/\/$/, "")}/api/internal/completed-projects`, {
       headers: internalHeaders(),
-      // Portfolio content, not a live dashboard -- an hour of staleness is
-      // fine and saves hitting Ops on every single page view. See the
-      // page's own revalidate export for the matching page-level cache.
-      next: { revalidate: 3600 },
+      // Portfolio content, not a live dashboard -- 60s of staleness is
+      // fine and still saves hitting Ops on every single page view, while
+      // letting a freshly-Invoiced project or newly-uploaded photo show
+      // up on the site well within a minute instead of up to an hour.
+      // See the page's own revalidate export for the matching page-level
+      // cache.
+      next: { revalidate: 60 },
     });
     if (!res.ok) {
       console.warn(`projectsData: completed-projects returned HTTP ${res.status}`);
@@ -75,7 +78,7 @@ export async function fetchProjectPhotos(name: string, substation?: string | nul
     const params = new URLSearchParams({ project: name || "", substation: substation || "" });
     const res = await fetch(`${baseUrl.replace(/\/$/, "")}/api/internal/project-photos?${params}`, {
       headers: internalHeaders(),
-      next: { revalidate: 3600 },
+      next: { revalidate: 60 },
     });
     if (!res.ok) {
       console.warn(`projectsData: project-photos lookup for "${name}" returned HTTP ${res.status}`);

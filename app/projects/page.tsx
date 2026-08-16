@@ -53,6 +53,7 @@ export default async function ProjectsPage() {
                       .filter(Boolean)
                       .join(" · ")}
                   </p>
+                  {p.websiteSummary && <p className="project-summary">{p.websiteSummary}</p>}
                   {p.photos.length > 0 && (
                     <div className="project-photo-grid">
                       {p.photos.map((photo) => (

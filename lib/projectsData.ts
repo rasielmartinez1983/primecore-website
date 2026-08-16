@@ -23,6 +23,7 @@ export type CompletedProject = {
   startDate: string | null;
   targetDate: string | null;
   invoicedAt: string | null;
+  websiteSummary: string | null;
 };
 
 export type ProjectPhoto = {

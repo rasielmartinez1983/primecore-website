@@ -624,6 +624,13 @@ form.contact-form textarea {
   margin: 0 0 18px;
 }
 
+.project-card .project-summary {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
 .project-photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

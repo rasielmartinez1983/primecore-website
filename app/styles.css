@@ -595,3 +595,58 @@ form.contact-form textarea {
   min-height: 120px;
   resize: vertical;
 }
+
+/* Projects page — portfolio gallery of finished jobs, pulled server-side
+   from ops.primecore (project list) and field-photos (wrap-up photos).
+   See lib/projectsData.ts / app/projects/page.tsx. */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.project-card {
+  background: var(--panel);
+  padding: 32px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.project-card .project-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.project-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 6px;
+}
+
+.project-photo-grid a {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-empty {
+  padding: 48px 32px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--border);
+}

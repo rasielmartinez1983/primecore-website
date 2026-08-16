@@ -15,6 +15,11 @@
 // visitor.
 
 export type CompletedProject = {
+  // Ops's internal database id -- only used server-to-server by /admin to
+  // save the website summary back to Ops (see app/api/admin/summary/route.ts).
+  // Never rendered on the public /projects page; projectNumber is the join
+  // key everywhere else (matching field-photos' photos, etc.).
+  id: string;
   projectNumber: string;
   name: string;
   substation: string | null;

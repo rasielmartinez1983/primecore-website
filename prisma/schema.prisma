@@ -1,0 +1,23 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// This site has no photo storage of its own -- the public /projects page
+// fetches completed projects from primecore-ops-local and their photos
+// from primecore-field-photos live, on every render (see lib/projectsData.ts).
+// HiddenPhoto is the one piece of state that genuinely belongs to the
+// website itself: photos an admin has chosen to stop showing here,
+// independent of whatever happens to that photo in field-photos (deleting
+// it there, or not, has no effect on this list either way). Keyed by the
+// field-photos Photo.id the photo came from. Managed from /admin -- see
+// app/admin/page.tsx and the hide/unhide API routes.
+model HiddenPhoto {
+  photoId   String   @id
+  createdAt DateTime @default(now())
+}

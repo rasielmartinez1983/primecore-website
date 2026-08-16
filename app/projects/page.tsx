@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroBackground from "@/components/HeroBackground";
 import { fetchCompletedProjects, fetchProjectPhotos } from "@/lib/projectsData";
+import { getHiddenPhotoIds } from "@/lib/hiddenPhotos";
 
 export const metadata: Metadata = {
   title: "Projects | PrimeCore Power Solutions",
@@ -13,14 +14,16 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function ProjectsPage() {
-  const projects = await fetchCompletedProjects();
+  const [projects, hiddenIds] = await Promise.all([fetchCompletedProjects(), getHiddenPhotoIds()]);
 
   // Photos are fetched per-project, server-side, in parallel -- fine at
-  // the handful-of-projects-a-year scale this company operates at.
+  // the handful-of-projects-a-year scale this company operates at. Anything
+  // an admin has hidden (see app/admin) is dropped here, independent of
+  // whatever field-photos still has stored for that photo id.
   const withPhotos = await Promise.all(
     projects.map(async (p) => ({
       ...p,
-      photos: await fetchProjectPhotos(p.name, p.substation),
+      photos: (await fetchProjectPhotos(p.name, p.substation)).filter((photo) => !hiddenIds.has(photo.id)),
     }))
   );
 

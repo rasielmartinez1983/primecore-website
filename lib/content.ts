@@ -95,3 +95,62 @@ export const CAPABILITIES = [
     description: "Protection and control work for the distribution substations that serve end customers.",
   },
 ];
+
+// Services page: testing & commissioning by equipment type. icon: see
+// components/ServiceIcon.tsx.
+export const TESTING = [
+  {
+    key: "relays",
+    icon: "pulse",
+    title: "Protective Relays",
+    intro: "Microprocessor, static and electromechanical relays.",
+    items: [
+      "Microprocessor relays: metering checks, set point verification, logic functions and operational testing",
+      "Static relays: set point verification and operational testing",
+      "Electromechanical relays: calibration, operational testing, maintenance and minor repairs",
+      "As Found / As Left settings records and comparisons",
+    ],
+  },
+  {
+    key: "transformers",
+    icon: "panel",
+    title: "Power Transformers",
+    intro: "Electrical tests and protective devices on the transformer.",
+    items: [
+      "Power factor and insulation testing",
+      "Turns ratio (TTR)",
+      "Bushing current transformers",
+      "Sudden pressure relay checks",
+      "Temperature probes and gauges",
+    ],
+  },
+  {
+    key: "breakers",
+    icon: "gear",
+    title: "Circuit Breakers",
+    intro: "Mechanism and contact condition before energizing.",
+    items: ["Timing and travel / velocity", "Contact resistance", "Insulation resistance"],
+  },
+  {
+    key: "instrument-transformers",
+    icon: "shield",
+    title: "Instrument Transformers",
+    intro: "CT and PT circuits from the yard to the relay.",
+    items: [
+      "CT ratio, polarity, excitation and burden",
+      "PT ratio, polarity and phasing",
+      "Secondary circuit verification through test switches and relays",
+    ],
+  },
+  {
+    key: "scada",
+    icon: "tower",
+    title: "SCADA & Substation Automation",
+    intro: "Supervisory control, data acquisition and communications.",
+    items: [
+      "RTU / RTAC points checkout with the control center",
+      "Relay communications and fiber links",
+      "Station metering and power quality meters",
+    ],
+  },
+];

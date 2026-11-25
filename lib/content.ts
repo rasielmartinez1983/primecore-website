@@ -42,10 +42,10 @@ export const SERVICES = [
     key: "panel-replacements",
     photo: "/substation-photos/1000006301.JPG",
     icon: "panel",
-    title: "Panel & BF Replacements",
-    summary: "Relay and breaker failure panels, Z block wiring, wire counts and labeling.",
+    title: "Panel Replacements & Scheme Upgrades",
+    summary: "Line, breaker failure, bus differential, autotransformer and distribution transformer panels, plus distribution scheme upgrades.",
     detail:
-      "Relay and breaker failure panel replacements from start to finish: wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
+      "Complete panel replacements from start to finish: line panels, breaker failure panels, bus differential panels, autotransformer panels and distribution transformer panels, plus distribution scheme upgrades. Wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
   },
   {
     key: "renewable-interconnection",

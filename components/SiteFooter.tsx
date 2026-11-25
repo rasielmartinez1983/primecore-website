@@ -7,7 +7,7 @@ export default function SiteFooter() {
       <div className="wrap">
         <div className="foot-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-light.png" alt="PrimeCore Power Solutions" />
+          <img src="/logo-light.png" alt="PrimeCore Power Solution" />
           <p>
             Protection and control for utility and renewable substations, from transmission to distribution.{" "}
             {COMPANY.serviceArea}.

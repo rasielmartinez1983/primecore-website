@@ -12,7 +12,7 @@ export default function SiteHeader() {
       <div className="wrap">
         <Link href="/" className="logo-link">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-light.png" alt="PrimeCore Power Solutions" />
+          <img src="/logo-light.png" alt="PrimeCore Power Solution" />
         </Link>
         <nav className="site-nav" aria-label="Main">
           {NAV.filter((item) => item.href !== "/").map((item) => (

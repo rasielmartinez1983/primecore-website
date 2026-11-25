@@ -846,3 +846,175 @@ ul.card-list li::before {
   border-radius: 50%;
   background: var(--green);
 }
+
+/* Home: full-width photo hero */
+section.hero.hero-full {
+  position: relative;
+  padding: 120px 0 110px;
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+section.hero.hero-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(17, 24, 39, 0.82) 0%, rgba(17, 24, 39, 0.55) 55%, rgba(17, 24, 39, 0.25) 100%);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.hero-inner > * {
+  max-width: 760px;
+}
+
+.hero-full .hero-pill {
+  background: rgba(126, 193, 63, 0.2);
+  color: #d9f0c2;
+  border: 1px solid rgba(126, 193, 63, 0.45);
+}
+
+.hero-full h1 {
+  color: #fff;
+  font-size: clamp(38px, 5vw, 62px);
+}
+
+.hero-full p.lead {
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 36rem;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 640px) {
+  section.hero.hero-full {
+    padding: 80px 0 72px;
+  }
+  section.hero.hero-full::before {
+    background: rgba(17, 24, 39, 0.72);
+  }
+}
+
+/* Home: experience numbers */
+.stats-band {
+  background: var(--green-darker);
+  color: #fff;
+  padding: 34px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat p {
+  margin: 0;
+}
+
+.stat .num {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.stat .label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 760px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Home: equipment brands */
+.brands-strip {
+  border-bottom: 1px solid var(--border);
+  padding: 26px 0;
+}
+
+.brands-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.brands-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.brands-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 34px;
+}
+
+.brands-list li {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+}
+
+/* Home: service cards with station photos */
+.card.photo-card {
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px 22px;
+}
+
+.photo-card .card-link {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-dark);
+}

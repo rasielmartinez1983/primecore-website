@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { COMPANY, SERVICES } from "@/lib/content";
-import ServiceIcon from "@/components/ServiceIcon";
+import { COMPANY, SERVICES, STATS, EQUIPMENT_BRANDS } from "@/lib/content";
 import { fetchCompletedProjects, fetchProjectPhotos } from "@/lib/projectsData";
 import { getHiddenPhotoIds } from "@/lib/hiddenPhotos";
 
@@ -31,46 +30,46 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="hero">
-        <div className="wrap hero-grid">
-          <div className="hero-copy">
-            <p className="hero-pill">Protection &amp; control · Florida · Nationwide</p>
-            <h1>Reliable substations start with tested protection.</h1>
-            <p className="lead">
-              We test, commission and upgrade relay and control systems for utilities, contractors and renewable
-              projects — from wind farms to transmission.
-            </p>
-            <div className="hero-actions">
-              <Link href="/contact" className="btn btn-primary">
-                Get a quote
-              </Link>
-              <Link href="/services" className="btn btn-soft">
-                See services
-              </Link>
-            </div>
-            <div className="hero-stats">
-              <div>
-                <p className="num">15+</p>
-                <p className="label">years combined experience</p>
-              </div>
-              <div>
-                <p className="num">50</p>
-                <p className="label">states we can work in</p>
-              </div>
-            </div>
+      <section className="hero hero-full">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="hero-bg" src="/substation-photos/1000004792.JPG" alt="" aria-hidden="true" />
+        <div className="wrap hero-inner">
+          <p className="hero-pill">Protection &amp; control · Florida · Nationwide</p>
+          <h1>Protection &amp; Control Testing and Commissioning</h1>
+          <p className="lead">
+            We test, commission and upgrade relay and control systems for utilities, contractors and renewable
+            projects — from wind farms to transmission.
+          </p>
+          <div className="hero-actions">
+            <Link href="/contact" className="btn btn-primary">
+              Get a quote
+            </Link>
+            <Link href="/services" className="btn btn-glass">
+              See what we do
+            </Link>
           </div>
-          <div className="hero-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="hero-photo" src="/substation-photos/1000004793.JPG" alt="Substation yard under a blue sky" />
-            <div className="hero-float">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/substation-photos/1000003982.JPG" alt="Wind turbine" />
-              <div>
-                <p className="float-title">Renewables ready</p>
-                <p className="float-sub">Wind &amp; solar interconnections</p>
-              </div>
+        </div>
+      </section>
+
+      <section className="stats-band">
+        <div className="wrap stats-grid">
+          {STATS.map((s) => (
+            <div className="stat" key={s.label}>
+              <p className="num">{s.num}</p>
+              <p className="label">{s.label}</p>
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="brands-strip">
+        <div className="wrap brands-inner">
+          <p className="brands-title">Equipment we test and test with</p>
+          <ul className="brands-list">
+            {EQUIPMENT_BRANDS.map((b) => (
+              <li key={b}>{b}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -84,10 +83,14 @@ export default async function HomePage() {
           </div>
           <div className="grid-3">
             {SERVICES.map((s) => (
-              <Link href="/services" className="card" key={s.key}>
-                <ServiceIcon name={s.icon} />
-                <h3>{s.title}</h3>
-                <p>{s.summary}</p>
+              <Link href="/services" className="card photo-card" key={s.key}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.photo} alt={s.title} loading="lazy" />
+                <div className="photo-card-body">
+                  <h3>{s.title}</h3>
+                  <p>{s.summary}</p>
+                  <span className="card-link">Learn more →</span>
+                </div>
               </Link>
             ))}
           </div>
@@ -135,7 +138,7 @@ export default async function HomePage() {
             </ul>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="split-photo" src="/substation-photos/1000006301.JPG" alt="Relay panels in a substation control house" />
+          <img className="split-photo" src="/substation-photos/1000000421.JPG" alt="Substation yard with power transformer" />
         </div>
       </section>
 

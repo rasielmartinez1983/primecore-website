@@ -18,9 +18,11 @@ export const NAV = [
 ];
 
 // icon: which line icon components/ServiceIcon.tsx draws for the service.
+// photo: station photo shown on the home page service cards.
 export const SERVICES = [
   {
     key: "relay-testing",
+    photo: "/substation-photos/1000006305.JPG",
     icon: "pulse",
     title: "Relay Testing & Commissioning",
     summary: "Secondary injection, metering, logic, CT/PT checks and end-to-end tests.",
@@ -29,6 +31,7 @@ export const SERVICES = [
   },
   {
     key: "settings-changes",
+    photo: "/substation-photos/1000006313.JPG",
     icon: "gear",
     title: "Settings Changes & Firmware",
     summary: "As Found downloads, settings review, firmware upgrades and outage testing.",
@@ -37,6 +40,7 @@ export const SERVICES = [
   },
   {
     key: "panel-replacements",
+    photo: "/substation-photos/1000006301.JPG",
     icon: "panel",
     title: "Panel & BF Replacements",
     summary: "Relay and breaker failure panels, Z block wiring, wire counts and labeling.",
@@ -45,6 +49,7 @@ export const SERVICES = [
   },
   {
     key: "renewable-interconnection",
+    photo: "/substation-photos/1000003984.JPG",
     icon: "turbine",
     title: "Renewable Interconnection",
     summary: "Wind and solar collector substations, co-gen tie-ins, 87L and transfer trip.",
@@ -53,6 +58,7 @@ export const SERVICES = [
   },
   {
     key: "clearance-planning",
+    photo: "/substation-photos/1000004789.JPG",
     icon: "shield",
     title: "Clearance & Isolation Planning",
     summary: "Isolation lists, add/remove plans and Green Sheets ready before the outage.",
@@ -61,6 +67,7 @@ export const SERVICES = [
   },
   {
     key: "transmission-distribution",
+    photo: "/substation-photos/1000000422.JPG",
     icon: "tower",
     title: "Transmission & Distribution",
     summary: "Tie-ins, new builds and retrofits at transmission and distribution voltages.",
@@ -154,3 +161,15 @@ export const TESTING = [
     ],
   },
 ];
+
+// Experience numbers shown in the band under the home hero.
+export const STATS = [
+  { num: "500+", label: "substations worked" },
+  { num: "500 kV", label: "maximum voltage worked" },
+  { num: "15+", label: "years combined experience" },
+  { num: "50", label: "states we can work in" },
+];
+
+// Relay and test-equipment brands we work with, shown as plain text
+// (no manufacturer logos).
+export const EQUIPMENT_BRANDS = ["SEL", "GE", "ABB", "Siemens", "Doble", "Megger", "Omicron"];

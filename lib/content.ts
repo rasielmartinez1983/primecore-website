@@ -48,6 +48,15 @@ export const SERVICES = [
       "Complete panel replacements from start to finish: line panels, breaker failure panels, bus differential panels, autotransformer panels and distribution transformer panels, plus distribution scheme upgrades. Wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
   },
   {
+    key: "capbanks-batteries",
+    photo: "/substation-photos/1000000423.JPG",
+    icon: "battery",
+    title: "Cap Banks & Station Batteries",
+    summary: "Capacitor bank installations and battery system and charger replacements, from distribution to transmission.",
+    detail:
+      "Capacitor bank installations and station battery system and charger replacements at distribution and transmission substations, including the protection and control wiring, testing and commissioning to put them in service.",
+  },
+  {
     key: "renewable-interconnection",
     photo: "/substation-photos/1000003984.JPG",
     icon: "turbine",

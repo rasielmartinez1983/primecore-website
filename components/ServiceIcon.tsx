@@ -27,6 +27,12 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   tower: <path d="M4 21V9l4-3 4 3v12M12 21V5l4-2 4 2v16M2 21h20" />,
+  battery: (
+    <>
+      <rect x="3" y="7" width="16" height="12" rx="1.5" />
+      <path d="M21 11v4M7 7V5h2v2M13 7V5h2v2M8 13h4M10 11v4" />
+    </>
+  ),
 };
 
 export default function ServiceIcon({ name }: { name: string }) {

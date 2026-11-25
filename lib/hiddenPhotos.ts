@@ -7,6 +7,10 @@ import { prisma } from "@/lib/prisma";
 // currently hidden).
 
 export async function getHiddenPhotoIds(): Promise<Set<string>> {
+  // Local dev without a DATABASE_URL (see .env.example): nothing can be
+  // hidden, so the public pages render instead of crashing. Production
+  // always has DATABASE_URL set, so a real database error still surfaces.
+  if (!process.env.DATABASE_URL) return new Set();
   const rows = await prisma.hiddenPhoto.findMany({ select: { photoId: true } });
   return new Set(rows.map((r: { photoId: string }) => r.photoId));
 }

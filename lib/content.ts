@@ -17,28 +17,55 @@ export const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
+// icon: which line icon components/ServiceIcon.tsx draws for the service.
 export const SERVICES = [
   {
-    key: "protection-control",
-    title: "Protection & Control",
-    summary:
-      "Design support, panel wiring, and commissioning of protection and control systems for electrical substations.",
+    key: "relay-testing",
+    icon: "pulse",
+    title: "Relay Testing & Commissioning",
+    summary: "Secondary injection, metering, logic, CT/PT checks and end-to-end tests.",
     detail:
-      "Protection and control is our core discipline. We work on relay panels, control schemes, and the wiring and testing that keeps a substation safe and reliable — from new construction through retrofits of existing stations.",
+      "Functional testing and commissioning of protection schemes: secondary injection and metering tests, logic verification, CT/PT ratio and polarity checks, lockout timing and end-to-end testing once the line is energized.",
   },
   {
-    key: "transmission",
-    title: "Transmission",
-    summary: "Support across high-voltage transmission projects, from substation tie-ins to line work coordination.",
+    key: "settings-changes",
+    icon: "gear",
+    title: "Settings Changes & Firmware",
+    summary: "As Found downloads, settings review, firmware upgrades and outage testing.",
     detail:
-      "We support transmission-level work where substations connect into the wider grid, coordinating closely with utility and EPC teams to keep protection schemes and control systems aligned with the rest of the project.",
+      "We download As Found settings, review new settings against the drawings and the protection philosophy, upgrade relay firmware, install and compare settings, and test the logic changes during the outage.",
   },
   {
-    key: "distribution",
-    title: "Distribution",
-    summary: "Protection, control, and support services for distribution-level substations and equipment.",
+    key: "panel-replacements",
+    icon: "panel",
+    title: "Panel & BF Replacements",
+    summary: "Relay and breaker failure panels, Z block wiring, wire counts and labeling.",
     detail:
-      "On the distribution side, we support the substations and equipment that bring power the rest of the way to the customer — with the same attention to protection and control that we bring to transmission work.",
+      "Relay and breaker failure panel replacements from start to finish: wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
+  },
+  {
+    key: "renewable-interconnection",
+    icon: "turbine",
+    title: "Renewable Interconnection",
+    summary: "Wind and solar collector substations, co-gen tie-ins, 87L and transfer trip.",
+    detail:
+      "Protection and control for wind and solar collector substations and generation interconnections: line differential (87L), transfer trip, reverse power and the communications between the plant and the utility.",
+  },
+  {
+    key: "clearance-planning",
+    icon: "shield",
+    title: "Clearance & Isolation Planning",
+    summary: "Isolation lists, add/remove plans and Green Sheets ready before the outage.",
+    detail:
+      "Isolation lists, add/remove plans and Green Sheets prepared ahead of time, with clearance dates and sequence agreed with your commissioning manager so the outage window goes to the work itself.",
+  },
+  {
+    key: "transmission-distribution",
+    icon: "tower",
+    title: "Transmission & Distribution",
+    summary: "Tie-ins, new builds and retrofits at transmission and distribution voltages.",
+    detail:
+      "Substation tie-ins, new construction and retrofits of existing stations at transmission and distribution voltages, working alongside utility and EPC teams.",
   },
 ];
 

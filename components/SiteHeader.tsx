@@ -2,27 +2,33 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV } from "@/lib/content";
-import HeaderBackground from "@/components/HeaderBackground";
+import { COMPANY, NAV } from "@/lib/content";
 
 export default function SiteHeader() {
   const pathname = usePathname();
 
   return (
     <header className="site-header">
-      <HeaderBackground />
       <div className="wrap">
         <Link href="/" className="logo-link">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="PrimeCore Power Solutions" />
+          <img src="/logo-light.png" alt="PrimeCore Power Solutions" />
         </Link>
-        <nav className="site-nav">
-          {NAV.map((item) => (
+        <nav className="site-nav" aria-label="Main">
+          {NAV.filter((item) => item.href !== "/").map((item) => (
             <Link key={item.href} href={item.href} className={pathname === item.href ? "active" : ""}>
               {item.label}
             </Link>
           ))}
         </nav>
+        <div className="header-actions">
+          <a href={`tel:${COMPANY.phoneHref}`} className="header-phone">
+            {COMPANY.phone}
+          </a>
+          <Link href="/contact" className="btn btn-primary">
+            Get a quote
+          </Link>
+        </div>
       </div>
     </header>
   );

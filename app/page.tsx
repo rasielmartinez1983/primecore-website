@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { COMPANY, SERVICES, STATS, EQUIPMENT_BRANDS } from "@/lib/content";
+import { COMPANY, SERVICES, STATS } from "@/lib/content";
 import { fetchCompletedProjects, fetchProjectPhotos } from "@/lib/projectsData";
 import { getHiddenPhotoIds } from "@/lib/hiddenPhotos";
 
@@ -59,17 +59,6 @@ export default async function HomePage() {
               <p className="label">{s.label}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="brands-strip">
-        <div className="wrap brands-inner">
-          <p className="brands-title">Equipment we test and test with</p>
-          <ul className="brands-list">
-            {EQUIPMENT_BRANDS.map((b) => (
-              <li key={b}>{b}</li>
-            ))}
-          </ul>
         </div>
       </section>
 

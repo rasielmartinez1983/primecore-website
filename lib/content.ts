@@ -170,6 +170,3 @@ export const STATS = [
   { num: "50", label: "states we can work in" },
 ];
 
-// Relay and test-equipment brands we work with, shown as plain text
-// (no manufacturer logos).
-export const EQUIPMENT_BRANDS = ["SEL", "GE", "ABB", "Siemens", "Doble", "Megger", "Omicron"];

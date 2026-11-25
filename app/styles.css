@@ -953,44 +953,6 @@ section.hero.hero-full::before {
   }
 }
 
-/* Home: equipment brands */
-.brands-strip {
-  border-bottom: 1px solid var(--border);
-  padding: 26px 0;
-}
-
-.brands-inner {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-
-.brands-title {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-
-.brands-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 34px;
-}
-
-.brands-list li {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #9ca3af;
-}
-
 /* Home: service cards with station photos */
 .card.photo-card {
   padding: 0;

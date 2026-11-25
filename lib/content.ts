@@ -43,9 +43,9 @@ export const SERVICES = [
     photo: "/substation-photos/1000006301.JPG",
     icon: "panel",
     title: "Panel Replacements & Scheme Upgrades",
-    summary: "Line, breaker failure, bus differential, autotransformer and distribution transformer panels, plus distribution scheme upgrades.",
+    summary: "Line panel, breaker failure panel, bus differential panel, autotransformer panel and distribution transformer panel replacements, plus distribution scheme upgrades.",
     detail:
-      "Complete panel replacements from start to finish: line panels, breaker failure panels, bus differential panels, autotransformer panels and distribution transformer panels, plus distribution scheme upgrades. Wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
+      "Complete panel replacements from start to finish: line panel, breaker failure panel, bus differential panel, autotransformer panel and distribution transformer panel replacements, plus distribution scheme upgrades. Wire counts, buzzing, Z block wiring, remote circuits, labeling and full panel checkout before the station goes back in service.",
   },
   {
     key: "capbanks-batteries",

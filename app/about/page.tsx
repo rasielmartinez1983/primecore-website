@@ -4,7 +4,7 @@ import HeroBackground from "@/components/HeroBackground";
 
 export const metadata: Metadata = {
   title: "About | PrimeCore Power Solutions",
-  description: "PrimeCore Power Solutions was founded by two lifelong friends with 15+ years of combined experience in substation protection and control.",
+  description: "PrimeCore Power Solutions was founded by two lifelong friends with 12+ years of experience in substation protection and control.",
 };
 
 export default function AboutPage() {

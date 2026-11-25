@@ -164,9 +164,9 @@ export const TESTING = [
 
 // Experience numbers shown in the band under the home hero.
 export const STATS = [
-  { num: "500+", label: "substations worked" },
+  { num: "300+", label: "substations worked" },
   { num: "500 kV", label: "maximum voltage worked" },
-  { num: "15+", label: "years combined experience" },
+  { num: "12+", label: "years of experience" },
   { num: "50", label: "states we can work in" },
 ];
 

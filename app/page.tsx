@@ -54,10 +54,6 @@ export default async function HomePage() {
                 <p className="label">years combined experience</p>
               </div>
               <div>
-                <p className="num">FPL</p>
-                <p className="label">standards &amp; documentation</p>
-              </div>
-              <div>
                 <p className="num">50</p>
                 <p className="label">states we can work in</p>
               </div>
